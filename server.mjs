@@ -195,8 +195,8 @@ app.delete("/api/v1/story/:id", async (req, res) => {
 });
 
 //  baseurl/filename.txt
-app.get(express.static(path.join(__dirname, "./web/build")));
-app.use("/", express.static(path.join(__dirname, "./web/build")));
+app.get("/",express.static(path.join(__dirname, "./web/build")));
+app.use( express.static(path.join(__dirname, "./web/build")));
 
 // /Users/malik/Desktop/_CLASS/SMIT-chatbot-b3/04. nodejs/2. crud operation
 app.use('/static', express.static(path.join(__dirname, 'static')))
